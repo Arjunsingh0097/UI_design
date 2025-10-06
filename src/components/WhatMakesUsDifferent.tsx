@@ -19,7 +19,7 @@ export default function WhatMakesUsDifferent() {
             What makes us different?
           </h2>
           <p className="text-lg text-gray-300 max-w-4xl">
-            Running payroll globally isn't just about salaries—it's about
+            Running payroll globally isn&apos;t just about salaries—it&apos;s about
             compliance, taxes, and smooth operations, all while keeping
             employees happy. The challenge? Doing it efficiently without the
             legal and admin hassle.

@@ -41,7 +41,7 @@ export default function AllInOneSolution() {
             All-in-one solution for global work payments
           </h2>
           <p className="max-w-4xl mx-auto text-lg text-gray-600 leading-relaxed">
-            More than a provider—a partner in your growth! Your team deserves more than a one-size-fits-all solution. That's why we go beyond basic services to offer flexible, tailored support for every stage of your global expansion.
+            More than a provider—a partner in your growth! Your team deserves more than a one-size-fits-all solution. That&apos;s why we go beyond basic services to offer flexible, tailored support for every stage of your global expansion.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ export default function AllInOneSolution() {
                   </div>
                   <div className="flex-1">
                     <p className="text-gray-800 text-sm font-medium">
-                      "Ashley-Benson-EOR-Contract" updated
+                      &quot;Ashley-Benson-EOR-Contract&quot; updated
                     </p>
                     <div className="flex space-x-4 mt-1">
                       <a href="#" className="text-teal-600 hover:text-teal-700 text-sm font-medium">Undo</a>

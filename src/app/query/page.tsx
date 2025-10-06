@@ -266,7 +266,7 @@ export default function QueryPage() {
                 Can I schedule a call with your team?
               </h3>
               <p className="text-gray-300">
-                Yes! You can book a demo or consultation call using the "Book a demo" button in the navigation bar.
+                Yes! You can book a demo or consultation call using the &quot;Book a demo&quot; button in the navigation bar.
               </p>
             </div>
           </div>

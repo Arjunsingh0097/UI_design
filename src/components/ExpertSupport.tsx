@@ -57,8 +57,8 @@ export default function ExpertSupport() {
               </h2>
   
               <p className="mt-6 text-lg md:text-xl text-gray-300 leading-relaxed">
-                Payroll and compliance challenges don't follow a 9-to-5 schedule—so neither do we.
-                We're your "boots on the ground" in 85+ countries, ensuring your business stays compliant
+                Payroll and compliance challenges don&apos;t follow a 9-to-5 schedule—so neither do we.
+                We&apos;re your &quot;boots on the ground&quot; in 85+ countries, ensuring your business stays compliant
                 and operates smoothly wherever you grow.
               </p>
   

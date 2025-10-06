@@ -385,7 +385,7 @@ export default function AboutSection() {
               {/* Title */}
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                  Why we're different
+                  Why we&apos;re different
                 </h2>
                 <p className="text-lg text-gray-600">
                   Trusted by industry leaders! We empower thousands of users worldwide with our expertise and personalised approach.
@@ -544,7 +544,7 @@ export default function AboutSection() {
               </div>
               <div className="space-y-2 text-sm text-gray-300 min-h-[200px]">
                 <p className="font-semibold text-white">Native Teams SAS</p>
-                <p>Av. Belgrano No. 687, Office "B" No. 685, City of Buenos Aires, Argentina</p>
+                <p>Av. Belgrano No. 687, Office &quot;B&quot; No. 685, City of Buenos Aires, Argentina</p>
                 <p className="font-semibold text-white mt-4">Legal entity code: 30718578341</p>
               </div>
               <button className="w-full border-2 border-gray-600 text-white py-3 rounded-xl hover:bg-gray-700 transition-colors font-semibold">

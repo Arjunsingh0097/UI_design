@@ -83,7 +83,7 @@ export default function CustomerTestimonials() {
                 <div className={`${testimonial.bgColor} rounded-2xl p-8 shadow-lg h-96 flex flex-col justify-between`}>
                   {/* Quote Icon */}
                   <div className={`${testimonial.quoteColor} text-6xl font-bold mb-4`}>
-                    "
+                    &quot;
                   </div>
                   
                   {/* Content */}

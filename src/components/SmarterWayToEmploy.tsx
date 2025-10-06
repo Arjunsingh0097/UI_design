@@ -81,39 +81,39 @@ export default function SmarterWayToEmploy() {
     ];
   
     return (
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Top Badge + Title */}
-          <div className="text-center mb-12">
-            <span className="inline-block mb-4 px-4 py-1 text-sm font-semibold bg-teal-100 text-teal-700 rounded-full">
+          <div className="text-center mb-8 md:mb-12">
+            <span className="inline-block mb-3 md:mb-4 px-3 md:px-4 py-1 text-xs md:text-sm font-semibold bg-teal-100 text-teal-700 rounded-full">
               WHY BUSINESSES CHOOSE US
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
               The smarter way to employ & pay globally
             </h2>
           </div>
   
           {/* Black Container with all 5 boxes */}
-          <div className="bg-[#1e1e1e] rounded-3xl p-6 md:p-10 border border-gray-700">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+          <div className="bg-[#1e1e1e] rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-10 border border-gray-700">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 items-stretch">
               {/* Left: 2x2 Feature Cards */}
-              <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="rounded-2xl p-6 border border-gray-700 hover:border-teal-400 transition-colors duration-300"
+                    className="rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-700 hover:border-teal-400 transition-colors duration-300"
                   >
-                    <div className="mb-4">{feature.icon}</div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
+                    <div className="mb-3 md:mb-4">{feature.icon}</div>
+                    <h3 className="text-base md:text-lg font-semibold text-white mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 text-sm">{feature.description}</p>
+                    <p className="text-gray-400 text-xs md:text-sm">{feature.description}</p>
                   </div>
                 ))}
               </div>
   
               {/* Right: Image */}
-              <div className="rounded-2xl overflow-hidden border border-gray-700">
+              <div className="rounded-xl md:rounded-2xl overflow-hidden border border-gray-700">
                 <img
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80"
                   alt="Collaborative team"

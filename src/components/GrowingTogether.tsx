@@ -64,11 +64,11 @@ export default function GrowingTogether() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative">
+    <section className="py-12 md:py-20 bg-gradient-to-b from-white to-gray-50 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Title */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900">
+        <div className="text-center mb-8 md:mb-14">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900">
             Growing together,{" "}
             <span className="bg-gradient-to-r from-teal-500 to-emerald-400 bg-clip-text text-transparent">
               globally
@@ -79,9 +79,9 @@ export default function GrowingTogether() {
 
       {/* Carousel Container */}
       <div className="relative max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] flex gap-6">
-          {/* Main Photo Block - 70% width */}
-          <div className="flex-[0_0_70%] rounded-3xl overflow-hidden">
+        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] flex flex-col sm:flex-row gap-4 sm:gap-6">
+          {/* Main Photo Block - 70% width on desktop, full width on mobile */}
+          <div className="flex-[0_0_100%] sm:flex-[0_0_70%] rounded-3xl overflow-hidden">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={currentSlide}
@@ -101,8 +101,8 @@ export default function GrowingTogether() {
             </AnimatePresence>
           </div>
 
-          {/* Side Preview Block - 30% width */}
-          <div className="flex-[0_0_30%] rounded-3xl overflow-hidden">
+          {/* Side Preview Block - 30% width on desktop, hidden on mobile */}
+          <div className="hidden sm:flex flex-[0_0_30%] rounded-3xl overflow-hidden">
             <div className="h-full relative">
               {/* Background Image for Preview */}
               <img 
@@ -116,20 +116,20 @@ export default function GrowingTogether() {
           {/* Navigation Controls */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/30 backdrop-blur-md hover:bg-white/50 rounded-full flex items-center justify-center text-gray-800 transition z-10"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white/30 backdrop-blur-md hover:bg-white/50 rounded-full flex items-center justify-center text-gray-800 transition z-10"
             aria-label="Previous slide"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/30 backdrop-blur-md hover:bg-white/50 rounded-full flex items-center justify-center text-gray-800 transition z-10"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white/30 backdrop-blur-md hover:bg-white/50 rounded-full flex items-center justify-center text-gray-800 transition z-10"
             aria-label="Next slide"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -137,15 +137,15 @@ export default function GrowingTogether() {
           {/* Mute Button */}
           <button
             onClick={() => setIsMuted(!isMuted)}
-            className="absolute bottom-4 right-4 w-10 h-10 bg-white/30 backdrop-blur-md hover:bg-white/50 rounded-full flex items-center justify-center text-gray-800 transition z-10"
+            className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-white/30 backdrop-blur-md hover:bg-white/50 rounded-full flex items-center justify-center text-gray-800 transition z-10"
             aria-label={isMuted ? "Unmute" : "Mute"}
           >
-            {isMuted ? "🔇" : "🔊"}
+            <span className="text-sm sm:text-base">{isMuted ? "🔇" : "🔊"}</span>
           </button>
         </div>
 
         {/* Slide Indicators */}
-        <div className="flex justify-center mt-8 space-x-4">
+        <div className="flex justify-center mt-6 md:mt-8 space-x-3 md:space-x-4">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -153,10 +153,10 @@ export default function GrowingTogether() {
                 setDirection(index > currentSlide ? 1 : -1);
                 setCurrentSlide(index);
               }}
-              className={`h-3 rounded-full transition-all duration-500 ${
+              className={`h-2 md:h-3 rounded-full transition-all duration-500 ${
                 index === currentSlide
-                  ? "bg-teal-500 w-10"
-                  : "bg-gray-300 w-3 hover:bg-gray-400"
+                  ? "bg-teal-500 w-8 md:w-10"
+                  : "bg-gray-300 w-2 md:w-3 hover:bg-gray-400"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

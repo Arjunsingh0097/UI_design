@@ -61,14 +61,14 @@ export default function CustomerTestimonials() {
   };
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-12 md:py-20 bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             What our customers say
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-lg md:text-xl text-gray-300">
             Trusted by companies worldwide
           </p>
         </div>
@@ -77,10 +77,10 @@ export default function CustomerTestimonials() {
       {/* Testimonials Carousel - Full Width */}
       <div className="relative w-full bg-black">
         <div className="overflow-hidden">
-          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 33.333}%)` }}>
+          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
             {testimonials.map((testimonial, index) => (
-              <div key={testimonial.id} className="w-1/3 flex-shrink-0 px-2">
-                <div className={`${testimonial.bgColor} rounded-2xl p-8 shadow-lg h-96 flex flex-col justify-between`}>
+              <div key={testimonial.id} className="w-full sm:w-1/2 md:w-1/3 flex-shrink-0 px-2">
+                <div className={`${testimonial.bgColor} rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg h-80 md:h-96 flex flex-col justify-between`}>
                   {/* Quote Icon */}
                   <div className={`${testimonial.quoteColor} text-6xl font-bold mb-4`}>
                     &quot;
@@ -127,32 +127,32 @@ export default function CustomerTestimonials() {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-white transition-colors duration-200 z-10"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-white transition-colors duration-200 z-10"
           aria-label="Previous testimonial"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-white transition-colors duration-200 z-10"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-white transition-colors duration-200 z-10"
           aria-label="Next testimonial"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
+        <div className="flex justify-center mt-6 md:mt-8 space-x-2">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-white' : 'bg-gray-600'
               }`}
               aria-label={`Go to testimonial ${index + 1}`}

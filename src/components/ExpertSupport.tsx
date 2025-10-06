@@ -41,40 +41,40 @@ export default function ExpertSupport() {
     ];
   
     return (
-      <section className="relative py-20 bg-gradient-to-br from-gray-900 to-black overflow-hidden">
+      <section className="relative py-12 md:py-20 bg-gradient-to-br from-gray-900 to-black overflow-hidden">
         {/* Background blobs */}
-        <div className="absolute bottom-0 left-0 w-80 h-80 opacity-20 blur-3xl bg-gradient-to-br from-teal-400 via-pink-400 to-purple-600 rounded-full" />
-        <div className="absolute top-0 right-0 w-80 h-80 opacity-20 blur-3xl bg-gradient-to-br from-purple-500 via-orange-400 to-teal-400 rounded-full" />
+        <div className="absolute bottom-0 left-0 w-60 h-60 md:w-80 md:h-80 opacity-20 blur-3xl bg-gradient-to-br from-teal-400 via-pink-400 to-purple-600 rounded-full" />
+        <div className="absolute top-0 right-0 w-60 h-60 md:w-80 md:h-80 opacity-20 blur-3xl bg-gradient-to-br from-purple-500 via-orange-400 to-teal-400 rounded-full" />
   
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 gap-8 md:gap-12 items-start">
             {/* LEFT → heading + text + services */}
             <div className="w-full max-w-xl lg:max-w-2xl">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.05]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.05]">
                 Expert support,
                 <br className="hidden md:block" />
                 every step of the way
               </h2>
   
-              <p className="mt-6 text-lg md:text-xl text-gray-300 leading-relaxed">
+              <p className="mt-4 md:mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
                 Payroll and compliance challenges don&apos;t follow a 9-to-5 schedule—so neither do we.
                 We&apos;re your &quot;boots on the ground&quot; in 85+ countries, ensuring your business stays compliant
                 and operates smoothly wherever you grow.
               </p>
   
               {/* Services below heading */}
-              <div className="mt-10 space-y-6">
+              <div className="mt-8 md:mt-10 space-y-4 md:space-y-6">
                 {services.map((service, index) => (
                   <div key={index}>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-teal-400 to-purple-500 text-white flex items-center justify-center shadow-md">
+                    <div className="flex items-start gap-3 md:gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-teal-400 to-purple-500 text-white flex items-center justify-center shadow-md">
                         {service.icon}
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-white font-semibold text-base sm:text-lg leading-tight">
+                        <h3 className="text-white font-semibold text-sm md:text-base lg:text-lg leading-tight">
                           {service.title}
                         </h3>
-                        <p className="mt-1 text-gray-300 text-sm leading-relaxed">
+                        <p className="mt-1 text-gray-300 text-xs md:text-sm leading-relaxed">
                           {service.description}
                         </p>
                       </div>

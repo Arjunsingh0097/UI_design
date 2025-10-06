@@ -23,37 +23,37 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:36px_36px] opacity-[0.15]" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24 pt-28 md:pt-36">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-20 md:pb-24 md:pt-28 lg:pt-36">
           <div className="text-center">
-            <div className="mb-5 flex items-center justify-center">
+            <div className="mb-4 md:mb-5 flex items-center justify-center">
               <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/80 backdrop-blur">Global payroll • Compliance • Payouts</span>
             </div>
 
-            <h1 className="mx-auto max-w-5xl text-balance text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mx-auto max-w-5xl text-balance text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
               Your Global Platform for Work Payments
             </h1>
 
-            <p className="mx-auto mt-5 max-w-3xl text-pretty text-base text-white/80 sm:text-lg md:text-xl">
+            <p className="mx-auto mt-4 md:mt-5 max-w-3xl text-pretty text-sm text-white/80 sm:text-base md:text-lg lg:text-xl">
               Expand without limits—hire, pay, and manage your global team and gig workers while we handle payroll, local compliance, and multi‑currency payments.
             </p>
 
-            <div className="mt-8 flex items-center justify-center gap-3">
+            <div className="mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href="#demo"
-                className="inline-flex items-center justify-center rounded-2xl bg-pink-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-pink-500/20 outline-none transition hover:scale-[1.02] hover:bg-pink-600 focus-visible:ring-2 focus-visible:ring-pink-400"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-2xl bg-pink-500 px-6 py-3 text-sm sm:text-base font-semibold text-white shadow-lg shadow-pink-500/20 outline-none transition hover:scale-[1.02] hover:bg-pink-600 focus-visible:ring-2 focus-visible:ring-pink-400"
               >
                 Book a demo
               </a>
               <a
                 href="#docs"
-                className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-base font-semibold text-white/90 outline-none transition hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/30"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm sm:text-base font-semibold text-white/90 outline-none transition hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/30"
               >
                 View docs
               </a>
             </div>
 
             {/* ===== Hero Image ===== */}
-            <div className="relative mx-auto mt-16 max-w-4xl">
+            <div className="relative mx-auto mt-12 md:mt-16 max-w-4xl">
               <img 
                 src="/images/herosectionimage.png" 
                 alt="Global Platform for Work Payments" 
@@ -62,9 +62,9 @@ export default function HeroSection() {
             </div>
 
             {/* trust bar */}
-            <div className="mx-auto mt-14 max-w-6xl">
-              <p className="mb-4 text-xs uppercase tracking-widest text-white/50">Trusted by modern teams</p>
-              <div className="grid grid-cols-2 gap-4 opacity-80 sm:grid-cols-3 md:grid-cols-6">
+            <div className="mx-auto mt-10 md:mt-14 max-w-6xl">
+              <p className="mb-3 md:mb-4 text-xs uppercase tracking-widest text-white/50">Trusted by modern teams</p>
+              <div className="grid grid-cols-2 gap-2 md:gap-4 opacity-80 sm:grid-cols-3 md:grid-cols-6">
                 {[
                   "Acme Co",
                   "Globex",
@@ -73,7 +73,7 @@ export default function HeroSection() {
                   "Soylent",
                   "Hooli",
                 ].map((brand) => (
-                  <div key={brand} className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-center text-sm text-white/70">{brand}</div>
+                  <div key={brand} className="rounded-xl border border-white/10 bg-white/[0.03] px-2 md:px-3 py-2 text-center text-xs md:text-sm text-white/70">{brand}</div>
                 ))}
               </div>
             </div>
@@ -82,9 +82,9 @@ export default function HeroSection() {
       </section>
 
       {/* ===== FEATURE CARDS ===== */}
-      <section className="bg-[#151516] py-16">
+      <section className="bg-[#151516] py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <FeatureCard
               title="Employer of Record"
               icon={<svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" /></svg>}
